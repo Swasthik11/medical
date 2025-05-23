@@ -13,7 +13,6 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   padding: 20px;
-  background-color: #000; /* Dark fallback background */
 }
 
 /* Container for all cards */
