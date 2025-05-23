@@ -15,7 +15,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: center; /* This centers the cards horizontally */
+    align-items: center;      /* Optional: vertically centers if in a container */
+    margin: 0 auto;
+    max-width: 1200px;        /* Controls max width on large screens */
   }
   
   /* Card Styles */
