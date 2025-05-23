@@ -19,20 +19,22 @@ body {
 
 /* Container for all cards */
 .card-container {
-  background-color: white; /* White background */
+  background-color: white;
   border-radius: 15px;
   padding: 20px;
   max-width: 1000px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   display: flex;
-  flex-direction: column; /* Always stack cards vertically */
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 /* Individual card */
 .card {
-  background-color:white ;
+  background-color: white;
   border: 1px solid #444;
   border-radius: 15px;
   padding: 15px;
@@ -42,6 +44,9 @@ body {
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   color: #fff;
+
+  flex: 1 1 300px; /* Allows flexibility on large screens and stacks on small screens */
+  max-width: 100%;
 }
 
 .card:hover {
@@ -86,8 +91,12 @@ body {
   color: white;
 }
 
-/* Mobile responsive already handled by stacking with flex-direction: column */
+/* Responsive styling */
 @media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+
   .card {
     width: 100%;
   }
