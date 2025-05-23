@@ -71,14 +71,15 @@ body {
 
 @media (min-width: 769px) {
     .card-container {
-        flex-wrap: nowrap;
+        flex-wrap: nowrap !important; /* Ensure no wrapping occurs */
         justify-content: space-between;
-        gap: 30px; /* Slightly increased gap for better spacing in desktop view */
+        gap: 30px;
+        flex-direction: row; /* Explicitly set to row for clarity */
     }
     .card {
-        flex: 1; /* Ensure cards take equal space */
-        min-width: 280px; /* Prevent cards from shrinking too much */
-        max-width: 380px; /* Prevent cards from stretching too wide */
+        flex: 1;
+        min-width: 280px;
+        max-width: 380px;
     }
 }
 
