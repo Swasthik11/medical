@@ -1,39 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Card Hover Effects</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="card-container">
-    
-    <!-- Card 1 -->
-    <div class="card">
-      <img src="q1.png" alt="Mechanism of Action">
-      <h3>Mechanism Of Action</h3>
-      <p>Understanding cellular repair</p>
-      <button class="learn-more-btn">Learn More</button>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <img src="q2.png" alt="Technology Platform">
-      <h3>Technology Platform</h3>
-      <p>Innovation at the core</p>
-      <button class="learn-more-btn">Learn More</button>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <img src="q3.png" alt="CMC & Manufacturing">
-      <h3>CMC & Manufacturing</h3>
-      <p>Ensuring quality and scale</p>
-      <button class="learn-more-btn">Learn More</button>
-    </div>
-
-  </div>
-
-</body>
-</html>
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Card Styles */
+  .info-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .info-card:hover {
+    background-color: #00b7c2; /* Peacock */
+    transform: translateY(-6px);
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-text {
+    padding: 16px;
+    text-align: left;
+    transition: color 0.3s;
+  }
+  
+  .card-text h2 {
+    color: #222;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+  }
+  
+  .card-text p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    transition: color 0.3s;
+  }
+  
+  .explore-btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    border: 2px solid orange;
+    background: transparent;
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card:hover .card-text h2,
+  .info-card:hover .card-text p {
+    color: #fff;
+  }
+  
+  .info-card:hover .explore-btn {
+    background-color: orange;
+    color: #fff;
+    border-color: orange;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .cards-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-card {
+      width: 90%;
+    }
+  }
+  
